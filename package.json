@@ -1,0 +1,19 @@
+{
+  "name": "canvas-extra-grade-info",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frociac/Canvas-Extra-Grade-Info.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/frociac/Canvas-Extra-Grade-Info/issues"
+  },
+  "homepage": "https://github.com/frociac/Canvas-Extra-Grade-Info#readme"
+}

@@ -95,6 +95,7 @@ window.onload = async function() {
   
     i = 0;
     assignmentTypesElements.forEach(element => {
+        if (element.classList.contains("dropped")) return;
         const assignmentType = element.querySelector('.context').textContent.trim();
         weightTable[assignmentType].high += gradeInfos[i].high;
         weightTable[assignmentType].upper += gradeInfos[i].upper;

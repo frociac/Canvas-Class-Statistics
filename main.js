@@ -95,14 +95,15 @@ window.onload = async function() {
   
     i = 0;
     assignmentTypesElements.forEach(element => {
-        if (element.classList.contains("dropped")) return;
         const assignmentType = element.querySelector('.context').textContent.trim();
-        weightTable[assignmentType].high += gradeInfos[i].high;
-        weightTable[assignmentType].upper += gradeInfos[i].upper;
-        weightTable[assignmentType].mean += gradeInfos[i].mean;
-        weightTable[assignmentType].median += gradeInfos[i].median;
-        weightTable[assignmentType].lower += gradeInfos[i].lower;
-        weightTable[assignmentType].low += gradeInfos[i].low;
+        let subtract = 1;
+        if (element.classList.contains("dropped")) subtract = -1;
+        weightTable[assignmentType].high += gradeInfos[i].high * subtract;
+        weightTable[assignmentType].upper += gradeInfos[i].upper * subtract;
+        weightTable[assignmentType].mean += gradeInfos[i].mean * subtract;
+        weightTable[assignmentType].median += gradeInfos[i].median * subtract;
+        weightTable[assignmentType].lower += gradeInfos[i].lower * subtract;
+        weightTable[assignmentType].low += gradeInfos[i].low * subtract;
         i++;
     });
 

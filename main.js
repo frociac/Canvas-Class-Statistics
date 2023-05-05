@@ -147,7 +147,16 @@ window.onload = async function() {
 
     classGradesTr.appendChild(classGradesTh);
 
-    table.appendChild(classGradesTr); 
+    table.appendChild(classGradesTr);
+
+    const keyTable = {
+      "high": "High",
+      "upper": "Upper Quartile",
+      "mean": "Mean",
+      "median": "Median",
+      "lower": "Lower Quartile",
+      "low": "Low"
+    }
 
     for (let key in scores) {
       let tr = document.createElement("tr");
@@ -157,7 +166,7 @@ window.onload = async function() {
       th.classList.add("title", "extension");
       th.setAttribute("scope", "row");
       th.style.fontSize = "18px";
-      th.textContent = `${key[0].toUpperCase() + key.slice(1)} Grade: `;
+      th.textContent = `${keyTable[key]} Grade: `;
       tr.appendChild(th);
     
       let td1 = document.createElement("td");

@@ -139,8 +139,8 @@ window.onload = async function() {
     classGradesTr.classList.add("class_grades");
 
     let classGradesTh = document.createElement("th");
-    classGradesTh.setAttribute("colspan", "5");
-    classGradesTh.textContent = "Class Statistics: ";
+    classGradesTh.setAttribute("colspan", "5"); 
+    classGradesTh.textContent = "Class Statistics (Roughly): ";
     classGradesTh.style.fontSize = "22px"
     classGradesTh.style.border = "none";
     classGradesTh.style.borderCollapse = "collapse";
@@ -151,42 +151,42 @@ window.onload = async function() {
 
     for (let key in scores) {
       let tr = document.createElement("tr");
-      tr.classList.add("student_assignment", "hard_coded", "final_grade", "feedback_visibility_ff");
+      tr.classList.add("student_assignment", "hard_coded", "final_grade", "feedback_visibility_ff", "extension");
     
       let th = document.createElement("th");
-      th.classList.add("title");
+      th.classList.add("title", "extension");
       th.setAttribute("scope", "row");
       th.style.fontSize = "18px";
       th.textContent = `${key[0].toUpperCase() + key.slice(1)} Grade: `;
       tr.appendChild(th);
     
       let td1 = document.createElement("td");
-      td1.classList.add("due");
+      td1.classList.add("due", "extension");
       tr.appendChild(td1);
     
       let td2 = document.createElement("td");
-      td2.classList.add("status");
+      td2.classList.add("status", "extension");
       td2.setAttribute("scope", "row");
       tr.appendChild(td2);
     
       let td3 = document.createElement("td");
-      td3.classList.add("assignment_score");
+      td3.classList.add("assignment_score", "extension");
       td3.setAttribute("title", "");
       tr.appendChild(td3);
     
       let div = document.createElement("div");
       div.style.position = "relative";
       div.style.height = "100%";
-      div.classList.add("score_holder");
+      div.classList.add("score_holder", "extension");
       td3.appendChild(div);
     
       let span1 = document.createElement("span");
-      span1.classList.add("assignment_presenter_for_submission");
+      span1.classList.add("assignment_presenter_for_submission", "extension");
       span1.style.display = "none";
       div.appendChild(span1);
     
       let span2 = document.createElement("span");
-      span2.classList.add("react_pill_container");
+      span2.classList.add("react_pill_container", "extension");
       div.appendChild(span2);
     
       let span3 = document.createElement("span");
@@ -194,17 +194,17 @@ window.onload = async function() {
       div.appendChild(span3);
     
       let span4 = document.createElement("span");
-      span4.classList.add("grade");
+      span4.classList.add("extension");
       span4.style.fontSize = "18px";
       span4.textContent = scores[key] + "%";
       span3.appendChild(span4);
     
       let td4 = document.createElement("td");
-      td4.classList.add("details");
+      td4.classList.add("details", "extension");
       tr.appendChild(td4);
     
       let span5 = document.createElement("span");
-      span5.classList.add("possible", "points_possible");
+      span5.classList.add("possible", "points_possible"), "extension";
       span5.setAttribute("aria-label", "");
       td4.appendChild(span5);
     

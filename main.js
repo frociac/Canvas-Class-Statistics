@@ -150,12 +150,12 @@ window.onload = async function() {
     table.appendChild(classGradesTr);
 
     const keyTable = {
-      "high": "High",
+      "high": "Highest Possible",
       "upper": "Upper Quartile",
       "mean": "Mean",
       "median": "Median",
       "lower": "Lower Quartile",
-      "low": "Low"
+      "low": "Lowest Possible"
     }
 
     for (let key in scores) {
